@@ -3,7 +3,7 @@ import pandas as pd
 from RegexTransformer import Templates2Regex, RegexMatch
 from SparkRegexFilter import IsMatched
 
-template_df = pd.read_csv("Templates/HPC_refined.csv", usecols=['Templates'])
+template_df = pd.read_csv("Templates/Mac_refined.csv", usecols=['Templates'])
 templates = template_df['Templates']
 
 regex_list = []
@@ -13,7 +13,7 @@ for tmp in templates:
 
 unmatchedlog = []
 
-loglines = open('Datasets/HPC.log')
+loglines = open('Datasets/Mac.log')
 for log in loglines:
     if(IsMatched(regex_list, log) == True):
         pass

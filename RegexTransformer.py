@@ -21,6 +21,7 @@ def Templates2Regex(template):
     regex = regex.replace("?", "\?")
     regex = regex.replace("$", "\$")
     regex = regex.replace("@", "\@")
+    regex = regex.replace("^", "\^")
 
     regex = regex.replace(":", "\:")
 

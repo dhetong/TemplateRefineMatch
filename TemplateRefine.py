@@ -9,7 +9,7 @@ def insertTemplate(tmp, tmplist):
             index = index+1
     return -1
 
-contentlist = pd.read_csv("Templates/Linux_templates.csv", usecols=['Templates'])
+contentlist = pd.read_csv("Templates/Mac_templates.csv", usecols=['Templates'])
 templates = contentlist['Templates']
 
 templates_new = []
@@ -27,4 +27,4 @@ print(len(templates))
 print(len(templates_new))
 
 refinedtmps = pd.DataFrame({'Templates' : templates_new})
-refinedtmps.to_csv("Templates/Linux_refined.csv")
+refinedtmps.to_csv("Templates/Mac_refined.csv")
